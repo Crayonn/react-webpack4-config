@@ -4,7 +4,7 @@ var history = require('connect-history-api-fallback');
 const cors = require('cors');
 const watcher = require('./watcher');
 const getWebpackMiddleware = require('./getWebpackMiddleware');
-const PORT = process.PORT || 8000;
+const PORT = process.PORT || 3000;
 const app = express();
 const { devMiddleware, hotMiddleware } = getWebpackMiddleware();
 

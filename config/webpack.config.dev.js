@@ -12,7 +12,7 @@ module.exports = {
   devtool: 'cheap-module-source-map',
   entry: {
     vendors,
-    app: [HotMiddleWareConfig, './index.js']
+    app: [HotMiddleWareConfig, '@babel/polyfill', './index.js']
   },
   output: {
     path: paths.assetsPath,

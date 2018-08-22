@@ -11,7 +11,7 @@ module.exports = {
   mode: 'production',
   devtool: false,
   entry: {
-    app: './index.js',
+    app: ['@babel/polyfill', './index.js'],
     vendors
   },
   output: {
