@@ -1,20 +1,15 @@
 import React from 'react';
 import "./index.css";
-import logo from './logo.svg';
+import { connect } from 'react-redux';
+import * as actions from './actions/todo';
+
 
 class App extends React.Component {
   render() {
+    console.log(this.props);
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
-      </div>
+      <div onClick={() => this.props.dispatch(actions.asHandle('1'))}>sssshjhjs</div>
     );
   }
 }
-export default App;
+export default connect(state => state)(App);
