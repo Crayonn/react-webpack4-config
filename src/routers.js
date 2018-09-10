@@ -1,10 +1,13 @@
 import React from 'react';
 import { Provider } from 'react-redux';
-import { Route } from 'react-router-dom';
+import { Route, Switch } from 'react-router-dom';
 import App from './pages/App';
 
 export default ({ store }) => (
   <Provider store={store}>
-    <Route component={App} path='/' />
+    <Switch>
+      <Route component={App} path='/home' />
+      <Route component={() => (<div>login</div>)} />
+    </Switch>
   </Provider>
 )
